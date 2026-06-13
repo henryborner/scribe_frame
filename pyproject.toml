@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scribe-frame"
+version = "0.1.0"
+description = "Plugin framework for Scribe OCR Toolkit — define your own OCR backends, formatters, and image chunkers"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.10"
+authors = [
+    { name = "Scribe Contributors" },
+]
+keywords = ["ocr", "plugin", "framework", "paddleocr", "document-parsing"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Image Recognition",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+    "Topic :: Text Processing :: Markup",
+]
+
+[project.optional-dependencies]
+gui = ["PyQt6>=6.8"]
+
+[project.scripts]
+scribe-frame-inspect = "scribe_frame.ui.inspector:main"
+scribe-frame = "scribe_frame.cli.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
