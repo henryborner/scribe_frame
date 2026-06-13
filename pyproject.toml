@@ -7,7 +7,7 @@ name = "scribe-frame"
 version = "0.1.0"
 description = "Plugin framework for Scribe OCR Toolkit — define your own OCR backends, formatters, and image chunkers"
 readme = "README.md"
-license = { text = "Apache-2.0" }
+license = { text = "MIT" }
 requires-python = ">=3.10"
 authors = [
     { name = "Scribe Contributors" },
@@ -16,7 +16,7 @@ keywords = ["ocr", "plugin", "framework", "paddleocr", "document-parsing"]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: Apache Software License",
+    "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",

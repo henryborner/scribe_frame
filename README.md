@@ -150,7 +150,7 @@ $ scribe-frame-inspect     # GUI plugin inspector
 
 ## License
 
-Apache-2.0 — see [LICENSE](LICENSE).
+MIT — see [LICENSE](LICENSE).
 
 ## Examples
 
