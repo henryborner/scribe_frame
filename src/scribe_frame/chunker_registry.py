@@ -14,10 +14,11 @@ class ChunkerRegistry:
         if cls._loaded:
             return
         try:
-            for ep in entry_points(group="scribe.chunkers"):
-                factory = ep.load()
-                instance = factory() if callable(factory) else factory
-                cls._chunkers[instance.name] = instance
+            for ep in entry_points():
+                if ep.group == "scribe.chunkers":
+                    factory = ep.load()
+                    instance = factory() if callable(factory) else factory
+                    cls._chunkers[instance.name] = instance
         except Exception:
             pass
         cls._loaded = True

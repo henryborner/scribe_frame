@@ -19,10 +19,11 @@ class FormatterRegistry:
         if cls._loaded:
             return
         try:
-            for ep in entry_points(group="scribe.formatters"):
-                factory = ep.load()
-                instance = factory() if callable(factory) else factory
-                cls._formatters[instance.format_id] = instance
+            for ep in entry_points():
+                if ep.group == "scribe.formatters":
+                    factory = ep.load()
+                    instance = factory() if callable(factory) else factory
+                    cls._formatters[instance.format_id] = instance
         except Exception:
             pass
         cls._loaded = True
